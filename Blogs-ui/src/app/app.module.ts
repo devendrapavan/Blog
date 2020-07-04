@@ -11,6 +11,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthGuardService } from './services/auth-guard.service';
 import { TokenInterceptorService } from './services/token.interceptor';
+import { UpdateComponent } from './update/update.component';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { TokenInterceptorService } from './services/token.interceptor';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DahsboardComponent
+    DahsboardComponent,
+    UpdateComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

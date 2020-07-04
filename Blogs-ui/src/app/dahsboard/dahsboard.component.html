@@ -1,3 +1,24 @@
-<p>
-  dahsboard works!
-</p>
+
+
+<table class="table">
+    <tbody>
+       <tr>
+           <th>
+               S.No
+           </th>
+           <th>
+               article title
+           </th>
+           <th>
+               status
+           </th>
+           <th>created By</th>
+       </tr>
+       <tr *ngFor="let data of articles;let i=index">
+           <td>{{i+1}}</td>
+           <td><a routerLink="">{{data.header}}</a></td>
+           <td>{{data.status}}</td>
+           <td>{{data.createdBy.email}}</td>
+       </tr>
+    </tbody>
+</table>
