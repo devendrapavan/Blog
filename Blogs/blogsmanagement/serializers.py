@@ -54,7 +54,7 @@ class ArticleDataSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ('header', 'body', 'createdAt', 'createdBy', 'status', 'comments')
+        fields = ('header', 'body', 'createdAt', 'createdBy', 'status', 'comments', 'id')
 
     @staticmethod
     def get_comments(obj):

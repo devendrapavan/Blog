@@ -22,3 +22,5 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = MyTokenObtainPairSerializer
+    # def post(self, request, *args, **kwargs):
+    #     return Response

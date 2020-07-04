@@ -69,10 +69,10 @@ class GetArticleById(generics.GenericAPIView):
     serializer_class = ArticleDataSerializer
     permission_classes = (IsAuthenticated,)
 
-    def get(self, request,id):
+    def get(self, request, id):
         try:
 
-            if request.is_staff:
+            if request.user.is_staff:
                 return Response(self.serializer_class(Article.objects.filter(id=id).first()).data, status=status.HTTP_200_OK)
             return Response(self.serializer_class(Article.objects.filter(created_by=request.user,id=id).first()).data,
                             status=status.HTTP_200_OK)
